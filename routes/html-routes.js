@@ -26,4 +26,9 @@ module.exports = function(app) {
   app.get("/home", isAuthenticated, (req, res) => {
     res.sendFile(path.join(__dirname, "../public/home.html"));
   });
+
+  // If user is logged in (isAuthenticated) allow them to go to create.html to make a blog post. 
+  app.get("/create", isAuthenticated, (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/create.html"));
+  });
 };
