@@ -1,26 +1,4 @@
-DROP DATABASE IF EXISTS uncloud_db;
 
-CREATE DATABASE uncloud_db;
-USE uncloud_db;
-
-CREATE TABLE IF NOT EXISTS Users (
-id INTEGER NOT NULL auto_increment,
-email VARCHAR(255) NOT NULL,
-username VARCHAR(255) NOT NULL UNIQUE, 
-password VARCHAR(255) NOT NULL,
--- avatar ??
-PRIMARY KEY (id)
-);
-
-CREATE TABLE posts (
-	post_id INT NOT NULL AUTO_INCREMENT,
-	post_name VARCHAR(255) NOT NULL,
-    username_author VARCHAR(255) NOT NULL,
-    post_body TEXT NOT NULL,
-    createdAt DATETIME NOT NULL,
-    updatedAt DATETIME NOT NULL,
-	PRIMARY KEY (id)
-);
 
 INSERT INTO posts (post_name, username_author, post_body)
 VALUES ("Every Day With Anxiety", "Young Bold Hag", "More like every moment. Some days are better than others, yes. But this is worse. Each moment can be different. I have to try to prepare. Prepare for something that is not predictable. Are there patterns? Sure. Over time you can begin to detect triggers. By this time, there will be differences your brain has adapted to try to cope. Not in a logical way. No, it’s been in survival-mode. It’s just becoming more neurotic to adapt so that you might still function well enough to eat and sleep. While my brain is busy trying to keep me alive in it’s own right, I am trying to survive it and perform my role in life as if I am okay to play the part. We aren’t exactly a team. Alas, I cannot live without it, as it cannot live without me. 
