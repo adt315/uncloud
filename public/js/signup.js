@@ -16,16 +16,17 @@ $(document).ready(() => {
       return;
     }
     // If we have an email and password, run the signUpUser function
-    signUpUser(userData.email, userData.password);
+    signUpUser(userData.email, userData.username, userData.password);
     emailInput.val("");
     passwordInput.val("");
   });
 
   // Does a post to the signup route. If successful, we are redirected to the members page
   // Otherwise we log any errors
-  function signUpUser(email, password) {
+  function signUpUser(email, username, password) {
     $.post("/api/signup", {
       email: email,
+      username: username,
       password: password
     })
       .then(() => {
