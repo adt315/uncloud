@@ -53,12 +53,13 @@ body {
 }
 
 .hero-2-text {
-  text-align: center;
+  text-align: right;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+  margin: 0px;
   }
 
 
@@ -126,20 +127,6 @@ Right column
   }
 } 
 
-.title {
-  float: left;
-
-}
-
-.post {
-  float: left;
-
-}
-
-.username {
-  float: left;
-
-}
 
 span.navbar-brand {
   background-color: teal;
@@ -168,16 +155,11 @@ span.navbar-brand {
   width: 75%;
 } 
 
-.portfolio {
-  width: 800px;
-  width: 80%;
-} 
 
 /* .contact { */ 
   /* height: 500px; */
   /* height: 50%;
 } */
-
 
 .card {
   background-color: white; 
@@ -186,30 +168,8 @@ span.navbar-brand {
   margin-top: 50px; 
  }  
 
-.portfolio-card {
-  background-color: rgb(207, 226, 225);
-  width: 500px; 
-} 
-
-h1 {
-  color: teal;
-  font-family: "Palatino Linotype", "Book Antiqua", serif;
-  font-weight: bold;
-}
-
 p {
   font-size: 1.35em;
-}
-
-.my-info {
-  font-size: 1em;
-}
-
-.project-info {
-  font-size: 1em;
-  text-align: center;
-  color: black;
-  
 }
 
 label {
@@ -221,22 +181,4 @@ label {
   width: 85%;
 }
 
-.placeholder {
-  height: 200px;
-  width: 200px;
-  margin-bottom: 30px;
-}
-
-
-.a-button {
-  color: white;
-}
-
-.project { 
-  height: 250px;
-  width: 500px; 
-  width: 100%;
-  margin-top: 60px;
-  margin-bottom: 10px;
-} 
 
