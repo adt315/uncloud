@@ -16,7 +16,7 @@ CREATE TABLE posts (
 	post_name VARCHAR(255) NOT NULL,
     username_author VARCHAR(255) NOT NULL,
     post_body TEXT NOT NULL,
-    createdAt DATETIME NOT NULL,
-    updatedAt DATETIME NOT NULL,
+    createdAt DATE NOT NULL,
+    updatedAt DATE NOT NULL,
 	PRIMARY KEY (id)
 );
