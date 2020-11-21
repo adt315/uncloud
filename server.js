@@ -42,31 +42,33 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-// //Set Handlebars as default templating engine
-// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-// app.set("view engine", "handlebars");
+//Set Handlebars as default templating engine
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 
-// //get route
-// app.get("/", function(req, res) {
-//   connection.query("SELECT * FROM posts;",
-//   function(err, data) {
-//     if (err) {
-//       throw err;
-//     }
-//     res.render("index", { posts: data });
-//   });
-// });
+//get route
+app.get("/api/all", function(req, res) {
+  connection.query("SELECT * FROM posts;",
+  function(err, data) {
+    if (err) {
+      throw err;
+    }
+    res.render('index', { posts: data });
+  });
+});
 
-// //post route
-// app.post("/", function(req, res) {
-//   connection.query("INSERT INTO posts (post) TEXT (?)", [req.body.wish], function(err, result) {
+//post route
+// app.post("/api/new", function(req, res) {
+//   var dbQuery = "INSERT INTO posts (post_name, username_author, post_body, createdAt, updatedAt) VALUES (?,?,?,?,?)";
+//   connection.query(dbQuery,
+//    [req.body.post_name, req.body.username_author, req.body.post_body, req.body.createdAt, req.body.updatedAt], function(err, result) {
 //     if (err) {
 //       throw err;
 //     }
 
 //     res.redirect("/");
 //   });
-// });
+//});
 
 
 // Requiring our routes

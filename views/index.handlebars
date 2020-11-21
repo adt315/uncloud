@@ -3,15 +3,15 @@
 <ul>
   {{#each uncloud}}
   	<li>
-  	   <p>ID: {{this.user}}</p>
-       <p>Blog: {{this.post}}</p>
+  	   <p>ID: {{this.post}}</p>
+       <p>Blog: {{this.post_name, this.username_author, this.post_body}}</p>
   	</li>
   {{/each}}
 </ul>
 
 <div>
   <form action="/" method="POST">
-  	<textarea type="text" name="post"></textarea>
+  	<textarea type="text" name="posts"></textarea>
 
   	<button type="submit">Submit</button>
   </form>
