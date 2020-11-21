@@ -2,7 +2,7 @@
   # Uncloud
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-  Heroku deployment link: https://dashboard.heroku.com/apps/uncloudblog
+  Heroku deployment link: https://uncloudblog.herokuapp.com/
 
   ## Table of Contents
   - [Description](https://github.com/brennandoehring/Uncloud#description)
