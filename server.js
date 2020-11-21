@@ -2,11 +2,14 @@
 const express = require("express");
 const session = require("express-session");
 const mysql = require("mysql");
+const exphbs = require("express-handlebars");
 // Requiring passport as we've configured it
 const passport = require("./config/passport");
 
+
+
 // Setting up port and requiring models for syncing
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 5100;
 const db = require("./models");
 
 const connection = mysql.createConnection({
@@ -14,7 +17,7 @@ const connection = mysql.createConnection({
   port: 3306,
   user: "root",
   password: "password",
-  database: ""
+  database: "uncloud_db"
 });
 
 connection.connect(function(err) {
@@ -24,6 +27,8 @@ connection.connect(function(err) {
   }
   console.log("connected as id " + connection.threadId);
 });
+
+
 
 // Creating express app and configuring middleware needed for authentication
 const app = express();
@@ -36,6 +41,35 @@ app.use(
 );
 app.use(passport.initialize());
 app.use(passport.session());
+
+//Set Handlebars as default templating engine
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
+//get route
+app.get("/api/all", function(req, res) {
+  connection.query("SELECT * FROM posts;",
+  function(err, data) {
+    if (err) {
+      throw err;
+    }
+    res.render('index', { posts: data });
+  });
+});
+
+//post route
+// app.post("/api/new", function(req, res) {
+//   var dbQuery = "INSERT INTO posts (post_name, username_author, post_body, createdAt, updatedAt) VALUES (?,?,?,?,?)";
+//   connection.query(dbQuery,
+//    [req.body.post_name, req.body.username_author, req.body.post_body, req.body.createdAt, req.body.updatedAt], function(err, result) {
+//     if (err) {
+//       throw err;
+//     }
+
+//     res.redirect("/");
+//   });
+//});
+
 
 // Requiring our routes
 require("./routes/html-routes.js")(app);

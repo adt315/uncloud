@@ -1,11 +1,17 @@
 $(document).ready(() => {
-  const createPost = $(".create-btn");
+  const createPost = $("#create");
   // This file just does a GET request to figure out which user is logged in
   // and updates the HTML on the page
   $.get("/api/user_data").then(data => {
-    $(".member-name").text(data.email);
+    $(".member-name").text(data.username);
   });
   
+  $.get("/api/create", function(data) {
+    title.append(newArticle.post_name);
+    username.append(newArticle.username_author);
+    post.append(newArticle.post_body);
+  });
+
   // Event handlers
   createPost.on("click", createPostRoute);
 
