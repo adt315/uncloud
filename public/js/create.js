@@ -2,14 +2,14 @@ $(document).ready(() => {
 $("#create").on("click", function(event) {
   event.preventDefault();
 
-  var newArticle = {
+  let newArticle = {
     createdAt: new Date(),
     post_name: $("#title").val().trim(),
     post_body: $("#write-post").val().trim(),
   };
 
   console.log(newArticle);
-  $.post("/api/home", newArticle)
+  $.post("/api/create", newArticle)
   .then(function() {
     title.append(newArticle.post_name);
     username.append(newArticle.username_author);

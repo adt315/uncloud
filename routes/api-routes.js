@@ -53,4 +53,14 @@ module.exports = function(app) {
       });
     }
   });
+
+  app.post("/api/create", (req, res) => { 
+    console.log(req.body);
+    let date = req.body.createdAt;
+    let title = req.body.post_name;
+    let body = req.body.post_body;
+    // Farrah send these variables over to the database
+    res.JSON(title);
+  });
 };
+
