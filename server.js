@@ -1,34 +1,13 @@
 // Requiring necessary npm packages
 const express = require("express");
 const session = require("express-session");
-const mysql = require("mysql");
 const exphbs = require("express-handlebars");
 // Requiring passport as we've configured it
 const passport = require("./config/passport");
 
-
-
 // Setting up port and requiring models for syncing
 const PORT = process.env.PORT || 5100;
 const db = require("./models");
-
-const connection = mysql.createConnection({
-  host: "localhost",
-  port: 3306,
-  user: "root",
-  password: "password",
-  database: "uncloud_db"
-});
-
-connection.connect(function(err) {
-  if (err) {
-    console.error("error connecting: " + err.stack);
-    return;
-  }
-  console.log("connected as id " + connection.threadId);
-});
-
-
 
 // Creating express app and configuring middleware needed for authentication
 const app = express();
@@ -48,7 +27,7 @@ app.set("view engine", "handlebars");
 
 //get route
 app.get("/api/all", function(req, res) {
-  connection.query("SELECT * FROM posts;",
+  db.Post.findAll({},
   function(err, data) {
     if (err) {
       throw err;
