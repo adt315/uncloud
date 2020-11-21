@@ -6,6 +6,12 @@ $(document).ready(() => {
     $(".member-name").text(data.email);
   });
   
+  $.get("/api/create", function(data) {
+    title.append(newArticle.post_name);
+    username.append(newArticle.username_author);
+    post.append(newArticle.post_body);
+  });
+
   // Event handlers
   createPost.on("click", createPostRoute);
 
