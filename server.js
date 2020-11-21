@@ -58,17 +58,17 @@ app.get("/api/all", function(req, res) {
 });
 
 //post route
-// app.post("/api/new", function(req, res) {
-//   var dbQuery = "INSERT INTO posts (post_name, username_author, post_body, createdAt, updatedAt) VALUES (?,?,?,?,?)";
-//   connection.query(dbQuery,
-//    [req.body.post_name, req.body.username_author, req.body.post_body, req.body.createdAt, req.body.updatedAt], function(err, result) {
-//     if (err) {
-//       throw err;
-//     }
+app.post("/api/new", function(req, res) {
+  var dbQuery = "INSERT INTO posts (post_name, username_author, post_body, createdAt, updatedAt) VALUES (?,?,?,?,?)";
+  connection.query(dbQuery,
+   [req.body.post_name, req.body.username_author, req.body.post_body, req.body.createdAt, req.body.updatedAt], function(err, result) {
+    if (err) {
+      throw err;
+    }
 
-//     res.redirect("/");
-//   });
-//});
+    res.redirect("/");
+  });
+});
 
 
 // Requiring our routes
