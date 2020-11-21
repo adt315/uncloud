@@ -122,7 +122,7 @@ label {
 #sign-up {
   position: absolute;
   top: 5%;
-  left: 90%;
+  left: 78%;
   font-size: 16pt;
   color: white;
   margin: 0px;
@@ -140,4 +140,10 @@ label {
 
  #post-btn {
    margin-top: 30px;
+ }
+
+ .username,
+ .title,
+ .blog-post {
+   margin-left: 10px;
  }
