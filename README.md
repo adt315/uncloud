@@ -5,11 +5,11 @@
   Heroku deployment link: https://dashboard.heroku.com/apps/uncloudblog
 
   ## Table of Contents
-  - [Description] (https://github.com/brennandoehring/Uncloud#description)
-  - [Usage] (https://github.com/brennandoehring/Uncloud#usage)
-  - [License] ((https://github.com/brennandoehring/Uncloud#license))
-  - [Contributing] (https://github.com/brennandoehring/Uncloud#contributing)
-  - [Questions] (https://github.com/brennandoehring/Uncloud#questions)
+  - [Description](https://github.com/brennandoehring/Uncloud#description)
+  - [Usage](https://github.com/brennandoehring/Uncloud#usage)
+  - [License]((https://github.com/brennandoehring/Uncloud#license)
+  - [Contributing](https://github.com/brennandoehring/Uncloud#contributing)
+  - [Questions](https://github.com/brennandoehring/Uncloud#questions)
 
   ## Description 
   Uncloud is a simple blog website for users to share their experiences and successes on mental health. Users can view posts or create, edit, and delete posts that they made themselves. 
