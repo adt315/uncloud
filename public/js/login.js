@@ -1,6 +1,7 @@
 $(document).ready(() => {
   // Getting references to our form and inputs
   const loginForm = $("form.login");
+  const usernameInput = $("input#username-input");
   const emailInput = $("input#email-input");
   const passwordInput = $("input#password-input");
 
@@ -8,6 +9,7 @@ $(document).ready(() => {
   loginForm.on("submit", event => {
     event.preventDefault();
     const userData = {
+      username: usernameInput.val().trim(),
       email: emailInput.val().trim(),
       password: passwordInput.val().trim()
     };
@@ -17,15 +19,17 @@ $(document).ready(() => {
     }
 
     // If we have an email and password we run the loginUser function and clear the form
-    loginUser(userData.email, userData.password);
+    loginUser(userData.email, userData.username, userData.password);
     emailInput.val("");
+    usernameInput.val("");
     passwordInput.val("");
   });
 
   // loginUser does a post to our "api/login" route and if successful, redirects us the the members page
-  function loginUser(email, password) {
+  function loginUser(email, username, password) {
     $.post("/api/login", {
       email: email,
+      username: username,
       password: password
     })
       .then(() => {

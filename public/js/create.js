@@ -1,31 +1,23 @@
 $(document).ready(() => {
-// Getting references to our form and input
-const headingInput = $("input#heading-input");
-const bodyInput = $("input#body-input");
-const imgInput = $("input#imgurl");
-const createArticleForm = $("form.createarticle");
-
-// Click event handler
-$("create-btn").on("click", createArticle());
-});
-
-createArticleForm.on("submit", event => {
+$("#create").on("click", function(event) {
   event.preventDefault();
-  let articleData = {
-      article: headingInput.val(),
-      body: bodyInput.val(),
-      imgurl: imgInput.val()
-  }; createArticle();
+
+  let newArticle = {
+    createdAt: new Date(),
+    post_name: $("#title").val().trim(),
+    post_body: $("#write-post").val().trim(),
+  };
+
+  console.log(newArticle);
+  $.post("/api/create", newArticle)
+  .then(function() {
+    title.append(newArticle.post_name);
+    username.append(newArticle.username_author);
+    post.append(newArticle.post_body);
+  }); changePage();
 });
 
-function createArticle(email, password) {
-  $.post("/create", {
-    email: email,
-    password: password
-  })
-    .then(() => {
-      window.location.replace("/home");
-    })
-    .catch(handleLoginErr);
-}
-
+  function changePage() {
+    window.location.replace("/home");
+  };
+});
