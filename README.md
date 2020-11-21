@@ -7,7 +7,7 @@
   ## Table of Contents
   - [Description](https://github.com/brennandoehring/Uncloud#description)
   - [Usage](https://github.com/brennandoehring/Uncloud#usage)
-  - [License]((https://github.com/brennandoehring/Uncloud#license)
+  - [License](https://github.com/brennandoehring/Uncloud#license)
   - [Contributing](https://github.com/brennandoehring/Uncloud#contributing)
   - [Questions](https://github.com/brennandoehring/Uncloud#questions)
 
