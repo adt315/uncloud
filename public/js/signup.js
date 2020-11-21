@@ -3,7 +3,7 @@ $(document).ready(() => {
   const signUpForm = $("form.signup");
   const emailInput = $("input#email-input");
   const usernameInput = $("input#username-input");
-  const passwordInput = $("input#password");
+  const passwordInput = $("input#password-input");
 
 
   // When the signup button is clicked, we validate the email and password are not blank
