@@ -1,10 +1,10 @@
 $(document).ready(() => {
-$("#create").on("click", function(event) {
+$("#create-btn").on("click", function(event) {
   event.preventDefault();
 
   let newArticle = {
     createdAt: new Date(),
-    post_name: $("#title").val().trim(),
+    post_name: $("#title-input").val().trim(),
     post_body: $("#write-post").val().trim(),
   };
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+  
 <head>
   <title>Home</title>
   <script type="text/javascript"
@@ -8,50 +8,53 @@
     async="async"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css" rel="stylesheet">
   <link href="stylesheets/style.css" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Fredericka the Great' rel='stylesheet'>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
 </head>
 
-<!-- Navigation Bar -->
-
 <body>
-  <section>
-    <div class="hero-image-1">
-      <div class="container">
-        <!-- <div class="row"> -->
-        <a id="logout" href="login.html">Logout</a>
-        <h1 class="hero-1-text">Welcome to
-          <br>
-          Uncloud,
-          <br>
-          <span class="member-name"></span>!</h1>
-      </div>
-    </div>
-    </div>
-    </div>
-  </section>
 
-  <div class="text-center">
-    <button type="submit" id="post-btn" class="w3-button w3-large w3-round">Create Post</button>
+  <!-- Navigation Bar -->
+  <div class="hero-image-1">
+    <div class="container">
+      <a class="logout-link" href="login.html">Logout</a>
+      <h1 class="hero-1-text">Welcome to
+        <br>
+        Uncloud,
+        <br>
+        <span class="member-name"></span>!</h1>
+    </div>
   </div>
 
-  <div class="card" id="home-card">
+  <!-- Create Post Button -->
+  <div class="text-center">
+
+    <a href="create.html"> 
+      <button id="post-btn" class="w3-button w3-large w3-round"> 
+        Create Post 
+      </button> 
+  </a>
+ 
+  <!-- Blog Posts Section -->
+  <div class="card home-card">
     <h5 class="username">Username</h5>
     <img src="images/art.png" alt="Artist" class="icon">
     <h2 class="title">TITLE</h2>
     <p class="blog-post">Blog Post</p>
     <div class="sharethis-inline-share-buttons"></div>
   </div>
-  <div class="card" id="home-card">
+
+  <div class="card home-card">
     <h5 class="username">Username</h5>
     <img src="images/glasses.png" alt="Glasses" class="icon">
     <h2 class="title">TITLE</h2>
     <p class="blog-post">Blog Post</p>
     <div class="sharethis-inline-share-buttons"></div>
   </div>
-  <div class="card" id="home-card">
+
+  <div class="card home-card">
     <h5 class="username">Username</h5>
     <img src="images/sun.png" alt="Sun" class="icon">
     <h2 class="title">TITLE</h2>
@@ -59,16 +62,17 @@
     <div class="sharethis-inline-share-buttons"></div>
   </div>
 
-  <div class="footer">
+  <!-- Footer -->
+  <footer>
     <a class="copyright" href="https://www.freepik.com/vectors/business-card">Business card vector created by makyzz -
       www.freepik.com</a>
     <br>
     <a class="copyright" href="https://www.freepik.com/vectors/background">Background vector created by starline -
       www.freepik.com</a>
     <p class="copyright">© 2020 Anxious Folk</p>
-  </div>
+  </footer>
 
-
+  <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/home.js"></script>
 
